@@ -1,17 +1,18 @@
-import { Navlink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
 
 export default function Header(){
 
-    return(
-        <header>
-            <div id="headerBranding">
-                Colour Academy
-            </div>
-            <nav id="headerNavbar">
-                <Navlink to={"/"} >Home</Navlink>
-                <Navlink to={"/generator"} >Generator</Navlink>
-                <Navlink to={"/generator/saved"} >Saved Themes</Navlink>
-            </nav>
-        </header>
-    )
+	return(
+		<header>
+			<div id="headerBranding">
+				ColourAcademy 
+			</div>
+			<nav id="headerNavbar">
+				<NavLink to={"/"} >Home</NavLink>
+				<NavLink to={"/generator"} >Generator</NavLink>
+				<NavLink to={"/generator/saved"} >Saved Themes</NavLink>
+			</nav>
+		</header>
+	)
 }
