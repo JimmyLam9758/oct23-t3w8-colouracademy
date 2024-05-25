@@ -1,6 +1,7 @@
 # ColourAcademy - CSS Variable Generator Website
 
 - CSS variable export (high priority)
+- Fix width of modal
 - save themes to a list of themes (medium priority)
 - preview components like UI Colours (nice-to-have)
 - Dark/light mode toggle in global context
