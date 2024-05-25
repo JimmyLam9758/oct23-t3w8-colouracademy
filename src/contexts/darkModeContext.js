@@ -12,14 +12,14 @@ export function useDarkModeDispatch(){
 }
 
 let themes = {
-    dark: {
-        background: "black",
-        colour: "white"
-    },
-    light: {
-        background: "white",
-        colour: "black"
-    }
+	dark: {
+		"--theme-background": "black",
+		"--theme-text-colour": "white"
+	},
+	light: {
+		"--theme-background": "white",
+		"--theme-text-colour": "black"
+	}
 }
 
 
@@ -27,19 +27,21 @@ export function DarkModeProvider({children}) {
 
 	let [darkModeValue, setDarkModeValue] = useState(false);
 
-    useEffect(() => {
-        // Find the body element 
-        let bodyElement = document.querySelector("body");
-        // Find the styles on the body element
-        // Modify the variables on the styles of the body element 
-        let modeName = darkModeValue ? "black" : "white";
-        Object.keys(themes[modeName]).forEach(modeKey => {
-            bodyElement.style.setProperty(modeKey, themes[modeName][modeKey]);
-        })
-        // bodyElement.style.setProperty("--theme-background", colourToApply)
-        // bodyElement.style.setProperty("--theme-text-colour")
+	useEffect(() => {
 
-    }, [darkModeValue]);
+		// Find the body element 
+		let bodyElement = document.querySelector("body");
+		// Find the styles on the body element
+		// Modify the variables on the styles of the body element 
+		let modeName = darkModeValue ? "dark" : "light";
+		Object.keys(themes[modeName]).forEach(modeKey => {
+			bodyElement.style.setProperty(modeKey, themes[modeName][modeKey]);
+		})
+		// bodyElement.style.setProperty("--theme-background", colourToApply)
+		// bodyElement.style.setProperty("--theme-text-colour", )
+
+
+	}, [darkModeValue]);
 
 	return(
 		<DarkModeData.Provider value={darkModeValue}>
