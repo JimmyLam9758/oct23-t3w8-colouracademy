@@ -1,3 +1,4 @@
+import { DarkModeToggleButton } from "./DarkModeToggleButton";
 
 
 export default function Footer(){
@@ -5,6 +6,8 @@ export default function Footer(){
         <footer>
             <h6>Copyright 2024 ColourAcademy / Jimmy</h6>
             <a href="mailto:test@email.com">Email us!</a>
+
+            <DarkModeToggleButton />
         </footer>
     )
 }
